@@ -1,0 +1,28 @@
+{% extends 'raim/main.html' %}
+
+
+{% block content %}
+
+<div class="header-bar">
+      <a href=" {% url 'tasks1' %} "> &#8592; Go back</a>
+</div>
+
+
+<div class="card-body">
+  <form method="POST">
+    {% csrf_token %}
+    <p>Are you sure to delete this action  {{ task.user }} </p>
+    <p>Are you sure to delete this action  {{ task.title }} </p>
+
+    <input type="submit" value="Delete">
+
+
+
+
+  </form>
+</div>
+{% endblock content%}
+
+
+
+

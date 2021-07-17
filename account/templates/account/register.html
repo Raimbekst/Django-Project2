@@ -1,0 +1,37 @@
+{% extends 'account/main_copy.html' %}
+
+{% block content %}
+<div class="header-bar"> 
+      <h3>Register</h3>
+</div>
+
+
+<div class="card-body">
+<form autocomplete="off" method="POST">
+   {% csrf_token %}
+{{ form.username.label  }}
+{{ form.username }}
+{{ form.email.label  }}
+{{ form.email }}
+{{ form.first_name.label  }}
+{{ form.first_name }}
+{{ form.last_name.label  }}
+{{ form.last_name }}
+
+{{ form.password1.label  }}
+{{ form.password1 }}
+
+{{ form.password2.label  }}
+{{ form.password2 }}
+   
+   <input style="margin-top:15px;" class="button" type="submit" value="login">
+
+</form>
+
+
+<p > If you do not have an account?<a  style="color:#EB796F;" href="{% url 'login' %} ">  Login</a> </p>
+
+</div>
+{% endblock content %}
+
+

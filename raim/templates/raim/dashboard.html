@@ -1,0 +1,39 @@
+{% extends 'raim/main.html' %}
+
+{% block content %}
+<div style="margin-top:100px;"  class= "container-fluid">
+
+                <div class=" row justify-content-between">
+                    <div  class=" col-lg-6  ">
+                        
+                        <div  class="p-4 bg-light white-box analytics-info">
+                            
+                            <h3 style="color:black;"  class="box-title">Total User</h3>
+                            
+                            <ul class="list-inline two-part d-flex align-items-center mb-0">
+                                
+                                <li>
+                                    <div style="margin-top:50px;" id="sparklinedash"><i class=" fa fa-bar-chart" style="color:green; font-size:35px"></i></div>
+                                </li>
+                                
+                                <li class="ms-auto"><span style="font-size:25px;" class="counter text-dark">{{user}}</span></li>
+                            </ul>
+                        </div>
+                    
+                    </div>
+                    <div class="col-lg-6 ">
+                        <div class="p-4 bg-light white-box analytics-info">
+                            <h3 style=" color:black;"     class="box-title">Total Task</h3>
+                            <ul class="list-inline two-part d-flex align-items-center mb-0">
+                                <li>
+                                    <div style="margin-top:50px;" id="sparklinedash2"><i class=" fa fa-bar-chart" style="color:green; font-size:35px"></i></div>
+                                </li>
+                                <li class="ms-auto"><span style="font-size:25px;" class="counter text-purple">{{task}}</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+
+{% endblock %}

@@ -1,0 +1,52 @@
+{% extends 'raim/main.html' %}
+
+{% block content %}
+
+
+
+<hr>
+
+
+
+
+<table>
+<thead style="color:white" class="bg-dark ">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Username</th>
+      <th scope="col">Name</th>
+      <th scope="col">Surname</th>
+      <th>Edit/ Delete</th>
+    </tr>
+</thead>
+
+
+
+
+    
+ <tbody>
+    {% for user in all_info %}
+    
+      
+
+    <tr>
+      <th scope="row">{{user.count}} </th>
+      <td>{{ user.username}}</td>
+      <td>{{ user.first_name }}</td>
+      <td>{{ user.last_name }}</td>
+       <td class="user_manage">
+       <a href="{% url 'update-user' user.id %} "> <img src="https://image.flaticon.com/icons/png/128/1160/1160515.png" data-src="https://image.flaticon.com/icons/png/128/1160/1160515.png" alt="Edit free icon" title="Edit free icon" width="20" height="20" class="lzy lazyload--done" srcset="https://image.flaticon.com/icons/png/128/1160/1160515.png 4x"></a>
+       <a href=" {% url 'delete-user' user.id %} "> <img src="https://image.flaticon.com/icons/png/128/3221/3221897.png" data-src="https://image.flaticon.com/icons/png/128/3221/3221897.png" alt="Delete free icon" title="Delete free icon" width="20" height="20" class="lzy lazyload--done" srcset="https://image.flaticon.com/icons/png/128/3221/3221897.png 4x"></a>
+       </td>
+    </tr>
+    <tr>
+        
+       
+   </tr>
+   {% endfor %}
+</tbody>
+
+</table>
+
+
+{% endblock %}
